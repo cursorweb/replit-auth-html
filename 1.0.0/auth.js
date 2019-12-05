@@ -33,6 +33,7 @@ let auth = function(){
       border:"solid 1px #888",
       borderRadius = "5px"
     }
+    
   }elseif(arguments.length==1){
     this.cls = arguments[0]
   }elseif(arguments.length==2){
