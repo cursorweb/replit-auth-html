@@ -1,7 +1,7 @@
 /*
 Code created by Junhao Zhang @coder100: repl.it/@coder100
 */
-let auth = function(){
+let Auth = function(){
   if(arguments.length==0){
     this.cls = false;
     this.styling = {
@@ -40,7 +40,7 @@ let auth = function(){
 } || {
   ondone: "location.reload()"
 };
-auth.prototype.append = function(elem){
+Auth.prototype.append = function(elem){
   if(elem){
     elem.parentNode.insertBefore(this.element, elem)
   }else{
@@ -48,13 +48,13 @@ auth.prototype.append = function(elem){
   }
   return true
 }
-auth.prototype.get = function(name){
+Auth.prototype.get = function(name){
   return this.element[name]
 }
-auth.prototype.getElement = function(){
+Auth.prototype.getElement = function(){
   return this.element
 }
-auth.prototype.set = function(name,value){
+Auth.prototype.set = function(name,value){
   this.element[name] = value
   return this
 }
