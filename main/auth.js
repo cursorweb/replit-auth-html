@@ -39,7 +39,12 @@ let Auth = function(){
   this.element = element
 }
 Auth.ondone = {
-  ondone: "location.reload()"
+  ondone: function(e){
+    location.reload();
+  },
+  onerror: function(e){
+    alert("An error occured. Data: "+e.data);
+  }
 };
 Auth.prototype.append = function(elem){
   if(elem){
@@ -60,6 +65,10 @@ Auth.prototype.set = function(name,value){
   return this
 }
 window.addEventListener("message", function(e) {
-  if (e.data !== 'auth_complete') return;
-  eval(Auth.ondone||"location.reload()")
+  if (e.data !== 'auth_complete'){
+    if(Auth.ondone) Auth.onerror(e)
+    else alert("An error occured. Data: "+e.data);
+  }
+  if(Auth.ondone) Auth.ondone(e)
+  else location.reload()
 }, false)
