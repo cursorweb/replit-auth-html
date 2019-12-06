@@ -11,7 +11,7 @@ let auth = function(){
       borderRadius: "5px"
     }
     this.ondone = "location.reload()";
-  }elseif(arguments.length==1){
+  }else if(arguments.length==1){
     this.cls = arguments[0]
     this.styling = {
       minHeight:"400px",
@@ -20,12 +20,12 @@ let auth = function(){
       borderRadius: "5px"
     }
     this.ondone = "location.reload()"
-  }elseif(arguments.length==2){
+  }else if(arguments.length==2){
     this.cls = arguments[0]
     this.styling = arguments[1]
     this.ondone = "location.reload()"
   }
-  elseif(arguments.length==3){
+  else if(arguments.length==3){
     this.cls = arguments[0]
     this.styling = arguments[1]
     this.ondone = arguments[2]
