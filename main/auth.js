@@ -37,6 +37,7 @@ let auth = function(){
   element.style = this.styling
   if(this.cls) element.cls = this.cls
   this.element = element
+  return {};
 }
 auth.prototype.append = function(elem){
   if(elem){
@@ -44,9 +45,6 @@ auth.prototype.append = function(elem){
   }else{
     document.body.appendChild(this.element)
   }
-  window.addEventListener("message", function(e) {
-    eval(this.ondone)
-  }, false)
   return true
 }
 auth.prototype.get = function(name){
@@ -59,3 +57,6 @@ auth.prototype.set = function(name,value){
   this.element[name] = value
   return this
 }
+window.addEventListener("message", function(e) {
+  eval(auth.ondone||"location.reload()")
+}, false)
