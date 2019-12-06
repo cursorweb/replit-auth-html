@@ -60,5 +60,6 @@ Auth.prototype.set = function(name,value){
   return this
 }
 window.addEventListener("message", function(e) {
+  if (e.data !== 'auth_complete') return;
   eval(Auth.ondone||"location.reload()")
 }, false)
