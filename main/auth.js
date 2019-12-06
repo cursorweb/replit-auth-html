@@ -37,8 +37,9 @@ let auth = function(){
   element.style = this.styling
   if(this.cls) element.cls = this.cls
   this.element = element
-  return {};
-}
+} || {
+  ondone: "location.reload()"
+};
 auth.prototype.append = function(elem){
   if(elem){
     elem.parentNode.insertBefore(this.element, elem)
