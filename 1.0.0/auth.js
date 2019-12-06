@@ -8,7 +8,7 @@ let auth = function(){
       minHeight:"400px",
       boxShadow:"3px 3px 10px rgba(0, 0, 0, 0.2)",
       border:"solid 1px #888",
-      borderRadius = "5px"
+      borderRadius: "5px"
     }
     this.ondone = "location.reload()";
   }elseif(arguments.length==1){
@@ -17,7 +17,7 @@ let auth = function(){
       minHeight:"400px",
       boxShadow:"3px 3px 10px rgba(0, 0, 0, 0.2)",
       border:"solid 1px #888",
-      borderRadius = "5px"
+      borderRadius: "5px"
     }
     this.ondone = "location.reload()"
   }elseif(arguments.length==2){
