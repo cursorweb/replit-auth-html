@@ -32,22 +32,30 @@ let auth = function(){
   }else{
     console.error("REPL.IT AUTH ERROR: Too many arguments put in.")
   }
-}
-auth.prototype.append = function(elem){
   let element = document.createElement('iframe')
   element.src = 'https://repl.it/auth_with_repl_site?domain=' + location.host
   element.style = this.styling
   if(this.cls) element.cls = this.cls
+  this.element = element
+}
+auth.prototype.append = function(elem){
   if(elem){
-    elem.parentNode.insertBefore(element, elem)
+    elem.parentNode.insertBefore(this.element, elem)
   }else{
-    document.body.appendChild(element)
+    document.body.appendChild(this.element)
   }
   window.addEventListener("message", function(e) {
     eval(this.ondone)
   }, false)
-  this.elem = element
+  return true
 }
-auth.prototype.get = function(){
-  return this.elem
+auth.prototype.get = function(name){
+  return this.element[name]
+}
+auth.prototype.getElement = function(){
+  return this.element
+}
+auth.prototype.set = function(name,value){
+  this.element[name] = value
+  return this
 }
