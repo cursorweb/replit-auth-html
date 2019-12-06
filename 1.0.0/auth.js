@@ -38,7 +38,7 @@ auth.prototype.append = function(elem){
   element.src = 'https://repl.it/auth_with_repl_site?domain=' + location.host
   element.style = this.styling
   if(this.cls) element.cls = this.cls
-  elem.parentNode.insertBefore(element, elem || this.currentScript || window)
+  elem.parentNode.insertBefore(element, elem || this.currentScript || document.body)
   window.addEventListener("message", function(e) {
     eval(this.ondone)
   }, false)
