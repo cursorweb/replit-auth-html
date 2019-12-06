@@ -34,7 +34,7 @@ let auth = function(){
   }
 }
 auth.prototype.append = function(elem){
-  var element = document.createElement('iframe')
+  let element = document.createElement('iframe')
   element.src = 'https://repl.it/auth_with_repl_site?domain=' + location.host
   element.style = this.styling
   if(this.cls) element.cls = this.cls
@@ -42,4 +42,8 @@ auth.prototype.append = function(elem){
   window.addEventListener("message", function(e) {
     eval(this.ondone)
   }, false)
+  this.elem = element
+}
+auth.prototype.get = function(){
+  return this.elem
 }
