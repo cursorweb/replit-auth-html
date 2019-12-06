@@ -12,7 +12,7 @@ Require a pull request. Please be sure that your code is indented properly. Tab 
 ```javascript
 new Auth()
 ```
-Creates OOP Auth.
+Creates OOP Auth. 
 Extends `new Auth`:
 ```javascript
 .append(elem)
