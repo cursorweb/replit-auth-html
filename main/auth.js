@@ -37,7 +37,8 @@ let Auth = function(){
   element.style = this.styling
   if(this.cls) element.cls = this.cls
   this.element = element
-} || {
+}
+Auth.ondone = {
   ondone: "location.reload()"
 };
 Auth.prototype.append = function(elem){
@@ -59,5 +60,5 @@ Auth.prototype.set = function(name,value){
   return this
 }
 window.addEventListener("message", function(e) {
-  eval(auth.ondone||"location.reload()")
+  eval(Auth.ondone||"location.reload()")
 }, false)
