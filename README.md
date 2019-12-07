@@ -7,6 +7,7 @@ new Auth().append();
 ```
 ## Contribution
 Submit a issue.
+
 Require a pull request. Please be sure that your code is indented properly. Tab spacing is 2 spaces.
 ## Docs
 ```javascript
