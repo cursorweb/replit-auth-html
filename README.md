@@ -29,7 +29,9 @@ Creates OOP Auth.<br>
 ```javascript
 .set(key,value)
 ```
-> Sets `key` to `value`<br>
+> Sets `key` to `value`
+
+
 **Extends `Auth`**:
 ```javascript
 .ondone = function(e){
