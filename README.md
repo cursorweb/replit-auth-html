@@ -13,7 +13,7 @@ Require a pull request. Please be sure that your code is indented properly. Tab 
 new Auth()
 ```
 Creates OOP Auth.<br>
-Extends `new Auth`:
+**Extends `new Auth`**:
 ```javascript
 .append(elem)
 ```
@@ -29,8 +29,8 @@ Extends `new Auth`:
 ```javascript
 .set(key,value)
 ```
-> Sets `key` to `value`
-Extends `Auth`
+> Sets `key` to `value`<br>
+**Extends `Auth`**:
 ```javascript
 .ondone = function(e){
   //arguments
