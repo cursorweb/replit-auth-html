@@ -35,7 +35,7 @@ let Auth = function(){
   let element = document.createElement('iframe')
   element.src = 'https://repl.it/auth_with_repl_site?domain=' + location.host
   element.style = this.styling
-  if(this.cls) element.cls = this.cls
+  if(this.cls) element.className = this.cls
   this.element = element
 }
 Auth.ondone = {
